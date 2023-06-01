@@ -1,0 +1,22 @@
+.containerApp {
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.breakLine {
+    color: black;
+    width: 100%;
+
+}
+
+.title {
+    color: black;
+    font-family: monospace;
+    font-size: 40px;
+    padding: 20px 0px 2px 0px;
+    text-align: center;
+    margin: 0;
+}
