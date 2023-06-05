@@ -1,0 +1,13 @@
+.textField input{
+   font-size: 18px;
+}
+
+.textField {
+    width: 60%;
+ }
+  
+
+.buttonContainer{
+    width: 100%;
+    margin: 10px 0;
+}

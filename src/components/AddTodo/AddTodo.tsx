@@ -2,27 +2,30 @@
 import styles from './AddTodo.module.css';
 import { TextField, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import Stack from '@mui/material/Stack';
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
+import { IaddCategory, IinputText } from '../../helpers/interfaces/interfaces';
+import { v4 as uuid } from 'uuid';
 
-interface Props {
-  addCategory: (category: string) => void
-}
 
-export const AddTodo = ({addCategory}: Props) => {
 
-  const [inputText, setInputText] = useState<string>('');
+export const AddTodo = ({addCategory}: IaddCategory) => {
+
+  const [inputText, setInputText] = useState<IinputText>({
+    textValue: '',
+    id:''
+  });
+
+  const { textValue } = inputText;
 
   const onchangeText = (event: any):void =>  {
-    const inputText: string = event.target.value;
-    setInputText(inputText);
+    const inputValue: string = event.target.value;
+    setInputText({textValue:inputValue, id: uuid() });
   }
 
   const onAdd = (): void => {
-    if (inputText.length <= 0 ) return;
-
+    if (textValue.length <= 0 ) return;
     addCategory(inputText);
-    setInputText("");
+    setInputText({textValue: '', id: ''});
   }
 
   const onKeyUpHandler = (event:any) => {
@@ -31,14 +34,11 @@ export const AddTodo = ({addCategory}: Props) => {
      }
   }
 
-
-
-
   return (
     <>
       <div className={styles.todoContainer}>
        <TextField
-       value={inputText}
+        value={textValue}
         className={styles.input} 
         id="standard-basic" 
         variant="standard"

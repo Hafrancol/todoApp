@@ -1,6 +1,6 @@
 .containerApp {
     width: 700px;
-    height: 800px;
+    height: 750px;
     background-color: white;
     border-radius: 8px;
     padding: 30px;
@@ -9,7 +9,6 @@
 .breakLine {
     color: black;
     width: 100%;
-
 }
 
 .title {
@@ -19,4 +18,10 @@
     padding: 20px 0px 2px 0px;
     text-align: center;
     margin: 0;
+}
+
+.todoContainer {
+    margin-top: 40px;
+    overflow-y: scroll;
+    height: 580px;
 }
