@@ -25,7 +25,7 @@ export const DialogComponent = (props: any) => {
       }
 
     const handleSave = () => {
-      setCategori((categories:IinputText) => {
+      setCategori((categories:IinputText[]) => {
         return categories.map((category:IinputText ) => {
           if(category.id == id){
             category.textValue = textArea;
@@ -39,11 +39,12 @@ export const DialogComponent = (props: any) => {
   return (
 <>
     <Dialog
+            fullWidth = {true}
+            maxWidth = 'xs'
             open={open}
             onClose={handleCloseDialog}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-            fullWidth ='xl'
+            aria-labelledby ="alert-dialog-title"
+            aria-describedby ="alert-dialog-description"
         >
         <DialogTitle id="alert-dialog-title">
           {"Edit your \" Todo \" ..."}

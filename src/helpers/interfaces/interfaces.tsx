@@ -1,5 +1,5 @@
 export interface IaddCategory {
-    addCategory: (category: string) => void
+    addCategory: (category: IinputText) => void
   }
 
 export interface IinputText {

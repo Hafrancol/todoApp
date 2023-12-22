@@ -3,6 +3,7 @@ import { AddTodo } from "./components/AddTodo/AddTodo"
 import styles from './TodoApp.module.css';
 import { TodoItem } from "./components/Todo/TodoItem";
 import { IinputText } from "./helpers/interfaces/interfaces";
+
 export const TodoApp = () => {
 
   const [categories, setCategories] = useState<IinputText[]>([]);

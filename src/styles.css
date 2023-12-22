@@ -1,8 +1,15 @@
-body {
-    background-color: #18387a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow-y: hidden;
+body{
+    margin:0px;
+
 }
+@media (min-width: 415px){
+    body {
+        background-color: #18387a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+}
+

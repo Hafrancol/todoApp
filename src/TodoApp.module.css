@@ -1,9 +1,9 @@
 .containerApp {
-    width: 700px;
-    height: 750px;
+    min-width: 360px;
+    height: 100vh;
     background-color: white;
     border-radius: 8px;
-    padding: 30px;
+    margin:5px
 }
 
 .breakLine {
@@ -24,4 +24,26 @@
     margin-top: 40px;
     overflow-y: scroll;
     height: 580px;
+}
+
+/* media queries to work with table */
+@media (min-width: 415px) and (max-width: 678px){
+    .containerApp {
+        max-width: 600px;
+        height: 80vh;
+        background-color: white;
+        border-radius: 8px;
+        padding:8px;
+    }
+}
+
+
+@media (min-width: 678px){
+    .containerApp {
+        width: 600px;
+        height: 80vh;
+        background-color: white;
+        border-radius: 8px;
+        padding:8px;
+    }
 }
