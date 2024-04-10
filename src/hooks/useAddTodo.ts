@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { IinputText } from '../helpers/interfaces/interfaces';
 import { v4 as uuid } from 'uuid';
 
-export const useAddTodo = (addCategory: any) =>{
+export const useAddTodo = (addCategory: any) => {
 
     const [inputText, setInputText] = useState<IinputText>({
         textValue: '',

@@ -9,7 +9,7 @@ import { DialogComponent } from "../Dialog/Dialog";
 export const TodoItem = ({ todoItem, setCategories }: any) => {
   const {textValue, id} = todoItem;
   const [open, setOPen] = useState(false);
-  //const [textArea, setTextArea] = useState(textValue);
+
 
   const deleteHandle = () => {
     setCategories((categories:IinputText[]) => categories.filter(item => item.id !== id));
@@ -25,7 +25,8 @@ export const TodoItem = ({ todoItem, setCategories }: any) => {
 
   return (
     <>
-      {open && <DialogComponent  open={open} 
+      {open && <DialogComponent  
+                        open={open} 
                         handleClose = {handleCloseDialog}
                         textValue = {textValue}
                         setCategori = {setCategories}

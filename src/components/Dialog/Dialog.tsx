@@ -1,40 +1,14 @@
 
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button} from '@mui/material';
 import styles from "./Dialog.module.css"
-import { useEffect, useState } from 'react';
-import { IinputText } from '../../helpers/interfaces/interfaces';
+import { useDialog } from '../../hooks/useDialog';
+import { ButtonGroup } from '@mui/material';
+
+
+
 export const DialogComponent = (props: any) => {
 
-    const {open, handleClose, textValue, setCategori, id} = props;
-    const [textArea, setTextArea] = useState(textValue);
-
-    const handleCloseDialog = () => {
-        handleClose();
-    }
-
-    useEffect(()=> {
-        //setTextArea(textValue);
-    }, []);
-
-    const handleTextAreaDialog = (event:any) => {
-        //Todo: Method to control the textarea
-        console.log('cambiando');
-        const inputValue: string = event.target.value;
-        setTextArea(inputValue)
-        // console.log(inputValue);
-      }
-
-    const handleSave = () => {
-      setCategori((categories:IinputText[]) => {
-        return categories.map((category:IinputText ) => {
-          if(category.id == id){
-            category.textValue = textArea;
-          }
-          return category;
-        })
-      })
-      handleClose();
-    }
+   const { open, handleCloseDialog, handleTextAreaDialog, handleSave, textArea} = useDialog(props);
 
   return (
 <>
@@ -64,10 +38,12 @@ export const DialogComponent = (props: any) => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
+          <ButtonGroup>
           <Button onClick={handleCloseDialog}>Close</Button>
           <Button onClick={handleSave} autoFocus>
             Save
           </Button>
+          </ButtonGroup>
         </DialogActions>
         
         </Dialog>

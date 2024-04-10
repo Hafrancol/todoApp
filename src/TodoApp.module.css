@@ -3,7 +3,8 @@
     height: 100vh;
     background-color: white;
     border-radius: 8px;
-    margin:5px
+    margin:5px;
+    overflow: hidden;
 }
 
 .breakLine {
@@ -23,7 +24,7 @@
 .todoContainer {
     margin-top: 40px;
     overflow-y: scroll;
-    height: 580px;
+    height: inherit;
 }
 
 /* media queries to work with table */
